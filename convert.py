@@ -41,9 +41,6 @@ for theme_dir_name in DIRS:
     themes = os.listdir(old_theme_dir)
     print "%s: %s" % (theme_dir_name, len(themes))
     for theme in themes:
-        old_preview_png = os.path.join(old_theme_dir, theme, "preview.png")
         old_thumbnail_png = os.path.join(old_theme_dir, theme, "thumbnail.png")
-        if os.path.exists(old_preview_png):
-            convert_filename(theme_dir_name, theme, old_preview_png, "preview")
         if os.path.exists(old_thumbnail_png):
             convert_filename(theme_dir_name, theme, old_thumbnail_png, "thumbnail")
